@@ -1,0 +1,20 @@
+id: d00a8796-4a60-445f-89fc-a542dc5fffa2
+timestamp: 2023-04-06T20:50:27Z
+username: guest
+source: TAP-GUI
+accelerator:
+  name: spring-cloud-serverless
+  source:
+    image: harbor.kindlab.tap.fynesy.com/tap/tap-packages@sha256:6f49bb69638b65c3e39cade1d8c4d2e5bf0fd90fde422107789a2e3e86ca5a50
+fragments:
+  - name: build-wrapper-maven
+    source:
+      image: harbor.kindlab.tap.fynesy.com/tap/tap-packages@sha256:195a3ca6585fa91c41292584a19c2807c72ecdf986ce860a7147451e89d467d4
+  - name: tap-workload
+    source:
+      image: harbor.kindlab.tap.fynesy.com/tap/tap-packages@sha256:dbf0dedb6848ad8a7704c1c19465a1ddae9039b0e63c1dd0df3e2ed9cbda6093
+options:
+  deploymentType: workload
+  includeBuildToolWrapper: true
+  projectName: tapkindscserverless1
+  sourceRepositoryPrefix: https://github.com/tfynes-pivotal/tapkindscserverless1
