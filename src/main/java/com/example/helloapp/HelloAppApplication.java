@@ -12,6 +12,7 @@ public class HelloAppApplication {
 	@Bean
 	public Function<String, String> hello() {
 		return (in) -> {
+			System.out.println("hello " + in);
 			return "Hello " + in;
 		};
 	}
